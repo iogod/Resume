@@ -1,0 +1,12 @@
+
+.lander h1,h5,h4 { 
+    position: absolute; 
+    top: 95%;
+    color: white;
+    font-family: 'Kufam', cursive;
+    left: 50%;
+    display: inline;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0;
+  }

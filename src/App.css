@@ -1,38 +1,145 @@
-.App {
+
+
+
+img {
+
+  object-fit: cover;
+}
+
+.lander {
+
+  background-image: none;
+ 
+}
+.profile {
+  border-radius: 50%;
+
+  
+}
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  
+  border-top: 100% solid #902DF6;
+}
+.hexagon {
+  width: 100px;
+  height: 57.735px;
+  background: #902DF6;
+  position: relative;
+}
+.hexagon::before {
+  content: "";
+  position: absolute;
+  top: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 28.8675px solid #902DF6;
+}
+.hexagon::after {
+  content: "";
+  position: absolute;
+  bottom: -28.8675px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 28.8675px solid #902DF6;
+}
+.hexagon p {
+ 
   text-align: center;
+ 
+ font-family: 'Ubuntu', sans-serif;
+ font-size: 20px;
+
+
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.bioname {
+
+  color: #902DF6;
+  display: inline-block;
+  font-weight:bold;
+}
+.hexagon h3 {
+
+  color:black;
+  font-family: 'Open Sans';
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.bio h1 {
+
+  font-family: 'Lobster';
+  text-align: center;
+  white-space: nowrap;
+}
+.bio p {
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 24px;
+}
+  
+.test {
+
+  width: 50%;
+  height: 50%;
+}
+body {
+
+  background-color:#f1eaf3;
+  height: '100%';
+  width: '100%';
+}
+.mainback body{
+
+  background-image: none;
+}
+.cloud {
+
+position: absolute;
+top:25%;
+max-width: 30;
+max-height: 30;
+opacity: .9;
+z-index: -1;
+animation-name: example;
+animation-duration: 400s ;
+
+}
+
+.myface:hover {
+
+  transform: scale(1.05)
+}
+
+.Montana{
+
+  position: fixed;
+  bottom:0%;
+  right: 0;
+  width: 58%;
+  height: 65%;
+  opacity: .23;
+  z-index: -10;
+  
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  @keyframes example {
+    0%   {left:10%;}
+    25%  {left:25%;}
+    50%  {left:75%;}
+    100% {left:100%;}
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
