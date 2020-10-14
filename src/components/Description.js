@@ -21,7 +21,6 @@ function Descriptor(props)  {
        <CardActionArea>
         <CardMedia
         onClick = {props.onClicker}
-        //   className={classes.media}
         style = {{height:'200px',objectFit: 'cover'}}
           image={props.item.image}
           title="Contemplative Reptile"

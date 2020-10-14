@@ -66,7 +66,7 @@ function makeListItems (comments,finish)  {
         />       
         {console.log(notes.id)}
         <ListItemIcon  onClick = {()=> finish(notes.id)}>
-            <DeleteIcon />
+            <DeleteIcon className ="trashButton" />
         </ListItemIcon>
         <Typography   color = "primary" style= {{fontSize:'11px', position:'absolute',bottom:'0%',right:'3px'}} > {setter(notes.createdAt)}  </Typography>
         {/* setter(notes.CreatedAt) */}

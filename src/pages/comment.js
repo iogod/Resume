@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import FV from './FormValidation'
 import Lister from '../components/Lister'
 import List from '@material-ui/core/List';
-import Comments from '../datasource/CommentDataSource'
+
 import Timer from '../components/timer'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Axios from 'axios';
@@ -35,7 +35,7 @@ class comment extends Component {
                 Comment:"",
                 Organization:""
             },
-            loading: false,
+            loading: true,
             comments:[],
             networkStaus:false
         }
@@ -51,10 +51,11 @@ class comment extends Component {
     Axios.get('/comment').then(res => {
 
        const {info,refs}  = res.data
-       console.log(refs)
+      
 
      
       info.length > 0 &&  this.setState({comments:info})
+      this.setState({loading:false})
        
     
         }).catch(err => {
@@ -80,7 +81,7 @@ class comment extends Component {
         Axios.delete('/comment/'+com,(req,res) => {
 
 
-            console.log('WTFFFF')
+            
             this.setState({loading:false})
 
         }).catch(err => {
@@ -142,14 +143,14 @@ class comment extends Component {
     }
 
  handleSubmit = () => {
-       
+       this.setState({loading:true})
         const {Name,Organization,Comment}= this.state;
-
+        
         
       if( this.checkNetworkConnection() ) {
         let Note = {Name:Name.trim(),Organization:Organization.trim(),Comment:Comment.trim()}
         var error= FV(Note)
-        !error ? this.pushComments() : this.setState({errors:error})}
+        !error ? this.pushComments() : this.setState({errors:error,loading:false})}
         else { this.setState({networkStaus:true}) }
        
     }
@@ -199,9 +200,7 @@ class comment extends Component {
 }
 
 handleUpdate = (e) => {
- 
      this.setState({[e.target.name]:e.target.value})
-   
 }
 
     render() {
