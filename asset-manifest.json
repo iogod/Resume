@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Resume/static/css/main.fa72d1ca.chunk.css",
+    "main.js": "/Resume/static/js/main.288499e9.chunk.js",
+    "main.js.map": "/Resume/static/js/main.288499e9.chunk.js.map",
+    "runtime-main.js": "/Resume/static/js/runtime-main.4f7f43b1.js",
+    "runtime-main.js.map": "/Resume/static/js/runtime-main.4f7f43b1.js.map",
+    "static/js/2.47e059df.chunk.js": "/Resume/static/js/2.47e059df.chunk.js",
+    "static/js/2.47e059df.chunk.js.map": "/Resume/static/js/2.47e059df.chunk.js.map",
+    "index.html": "/Resume/index.html",
+    "precache-manifest.62d948dc83b09540c8a670d65cbb5cde.js": "/Resume/precache-manifest.62d948dc83b09540c8a670d65cbb5cde.js",
+    "service-worker.js": "/Resume/service-worker.js",
+    "static/css/main.fa72d1ca.chunk.css.map": "/Resume/static/css/main.fa72d1ca.chunk.css.map",
+    "static/js/2.47e059df.chunk.js.LICENSE.txt": "/Resume/static/js/2.47e059df.chunk.js.LICENSE.txt",
+    "static/media/USC.jpg": "/Resume/static/media/USC.4e279209.jpg",
+    "static/media/airplane.png": "/Resume/static/media/airplane.769fc777.png",
+    "static/media/ddg.jpg": "/Resume/static/media/ddg.96ae185f.jpg",
+    "static/media/gps.jpg": "/Resume/static/media/gps.7c35d400.jpg",
+    "static/media/image1.jpeg": "/Resume/static/media/image1.4952e05b.jpeg",
+    "static/media/linkedin.jpg": "/Resume/static/media/linkedin.932f0193.jpg",
+    "static/media/morganstate.jpg": "/Resume/static/media/morganstate.f704edbe.jpg",
+    "static/media/mountain.png": "/Resume/static/media/mountain.fa31dcac.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4f7f43b1.js",
+    "static/js/2.47e059df.chunk.js",
+    "static/css/main.fa72d1ca.chunk.css",
+    "static/js/main.288499e9.chunk.js"
+  ]
+}
