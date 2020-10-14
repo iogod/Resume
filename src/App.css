@@ -1,33 +1,25 @@
-
-
-
 img {
-
   object-fit: cover;
 }
 
 .lander {
-
   background-image: none;
- 
 }
 .profile {
   border-radius: 50%;
-
-  
 }
 .arrow-down {
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  
-  border-top: 100% solid #902DF6;
+
+  border-top: 100% solid #902df6;
 }
 .hexagon {
   width: 100px;
   height: 57.735px;
-  background: #902DF6;
+  background: #902df6;
   position: relative;
 }
 .hexagon::before {
@@ -39,7 +31,7 @@ img {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 28.8675px solid #902DF6;
+  border-bottom: 28.8675px solid #902df6;
 }
 .hexagon::after {
   content: "";
@@ -50,108 +42,93 @@ img {
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-top: 28.8675px solid #902DF6;
+  border-top: 28.8675px solid #902df6;
 }
 .hexagon p {
- 
   text-align: center;
- 
- font-family: 'Ubuntu', sans-serif;
- font-size: 20px;
 
-
-  
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
 }
-
 
 .bioname {
-
-  color: #902DF6;
+  color: #902df6;
   display: inline-block;
-  font-weight:bold;
+  font-weight: bold;
 }
 .hexagon h3 {
-
-  color:black;
-  font-family: 'Open Sans';
-
+  color: black;
+  font-family: "Open Sans";
 }
 
 .trashButton:hover {
- 
-  color: #902DF6;
-
+  color: #902df6;
 }
 
 .contact {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   padding: 4px;
   font-size: 20px;
 }
 
 .bio h1 {
-
-  font-family: 'Lobster';
+  font-family: "Lobster";
   text-align: center;
   white-space: nowrap;
 }
 .bio p {
-
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 24px;
 }
-  
-.test {
 
+.test {
   width: 50%;
   height: 50%;
 }
 body {
-
-  background-color:#f1eaf3;
-  height: '100%';
-  width: '100%';
+  background-color: #f1eaf3;
+  height: "100%";
+  width: "100%";
 }
-.mainback body{
-
+.mainback body {
   background-image: none;
 }
 .cloud {
-
-position: absolute;
-top:25%;
-max-width: 30;
-max-height: 30;
-opacity: .9;
-z-index: -1;
-animation-name: example;
-animation-duration: 400s ;
-
+  position: absolute;
+  top: 25%;
+  max-width: 30;
+  max-height: 30;
+  opacity: 0.9;
+  z-index: -1;
+  animation-name: cloudmove;
+  animation-duration: 400s;
 }
 
 .myface:hover {
-
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
-.Montana{
-
+.Montana {
   position: fixed;
-  bottom:0%;
+  bottom: 0%;
   right: 0;
   width: 58%;
   height: 65%;
-  opacity: .23;
+  opacity: 0.23;
   z-index: -10;
-  
+}
+
+@keyframes cloudmove {
+  0% {
+    left: 10%;
   }
-
-  @keyframes example {
-    0%   {left:10%;}
-    25%  {left:25%;}
-    50%  {left:75%;}
-    100% {left:100%;}
+  25% {
+    left: 25%;
   }
-
-
-
+  50% {
+    left: 75%;
+  }
+  100% {
+    left: 100%;
+  }
+}

@@ -48,6 +48,9 @@ const skilldata = [
 },{
     name:"UI/UX",
     level:71
+}, {
+    name:"Postman",
+    level:85
 }
 
 
