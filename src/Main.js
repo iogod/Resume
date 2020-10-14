@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Skyline from "./media/airplane.jpeg";
+import Skyline from "./media/airplane.png";
 import "./Main.css";
 
 let Photo = () => {

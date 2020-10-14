@@ -16,14 +16,14 @@ export class contact extends Component {
         </div>
         <Grid justify="center" container>
           <Grid item lg={4} style={{ marginBottom: "15px" }}>
-            <PhoneIcon fontSize="large" style={{ color: "#902DF6" }} />
-            <a className="contact" href={"mailto:" + "4102318059@txt.att.net"}>
+            <PhoneIcon fontSize="large" style={{ color: "#BEBEBE" }}  />
+            <a className="contact" href={"mailto:" + "4102318059@txt.att.net"} style= {{marginRight:'10px',color: "#902DF6"}}>
               (410)-231-8059
             </a>
-            <EmailIcon style={{ color: "#902DF6" }} />
+            <EmailIcon style={{ color: '#BEBEBE' }} />
             <a
               className="contact"
-              href={"mailto:" + "johnson.roscoea@gmail.com"}
+              href={"mailto:" + "johnson.roscoea@gmail.com"} style={{ color: "#902DF6" }} 
             >
               johnson.roscoea@gmail.com
             </a>
