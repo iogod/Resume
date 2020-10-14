@@ -9,6 +9,13 @@ import Comments from '../datasource/CommentDataSource'
 import Timer from '../components/timer'
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Axios from 'axios';
+import { Alert, AlertTitle } from '@material-ui/lab';
+import Dialog from '@material-ui/core/Dialog';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
+import DialogContentText from '@material-ui/core/DialogContentText';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import Slide from '@material-ui/core/Slide';
 
 
 class comment extends Component {
@@ -29,7 +36,8 @@ class comment extends Component {
                 Organization:""
             },
             loading: false,
-            comments:[]
+            comments:[],
+            networkStaus:false
         }
 
         // this.caller = this.caller.bind(this)
@@ -37,10 +45,9 @@ class comment extends Component {
 
 
    async  componentDidMount(){
-      
-    //  const info = await caller() 
-    //  console.log(info)
 
+    if(this.checkNetworkConnection()) { 
+  
     Axios.get('/comment').then(res => {
 
        const {info,refs}  = res.data
@@ -55,6 +62,15 @@ class comment extends Component {
 
             console.log(err)
         })
+    } else {
+        this.setState({networkStaus:true})
+    }
+    window.addEventListener('online',  ()=>{
+
+        this.setState({networkStaus:false})
+        console.log('Online Again')
+        this.componentDidMount()
+    });
         
     }
 
@@ -85,18 +101,56 @@ class comment extends Component {
 
 
     }
+    checkNetworkConnection = () => {
+
+        return window.navigator.onLine
+    }
+      
+    showNetworkConnection = () =>  {
+        {
+            const handleClose = () => {
+
+                this.setState({networkStaus:false})
+            }
+            return (
+              <div>
+                
+                <Dialog
+                  open={this.state.networkStaus}
+                  keepMounted
+                  
+                  aria-labelledby="alert-dialog-slide-title"
+                  aria-describedby="alert-dialog-slide-description"
+                >
+                  <DialogTitle  color="primary"  id="alert-dialog-slide-title">{"Network Error"}</DialogTitle>
+                  <DialogContent>
+                    <DialogContentText id="alert-dialog-slide-description">
+                    Please check internet connection
+                    </DialogContentText>
+                  </DialogContent>
+                  <DialogActions>
+                  
+                    <Button color="primary" onClick= {handleClose}>
+                     Ok
+                    </Button>
+                  </DialogActions>
+                </Dialog>
+              </div>
+            );
+          }
+      
+    }
 
  handleSubmit = () => {
        
         const {Name,Organization,Comment}= this.state;
 
         
-       
+      if( this.checkNetworkConnection() ) {
         let Note = {Name:Name.trim(),Organization:Organization.trim(),Comment:Comment.trim()}
         var error= FV(Note)
-      
-
-        !error ? this.pushComments() : this.setState({errors:error})
+        !error ? this.pushComments() : this.setState({errors:error})}
+        else { this.setState({networkStaus:true}) }
        
     }
 
@@ -153,7 +207,7 @@ handleUpdate = (e) => {
     render() {
        
         return (
-
+         
             <div>
  <div className="bio"  style={{paddingTop:'30px'}}> 
 
@@ -180,12 +234,16 @@ handleUpdate = (e) => {
            <div width= "100%" style ={{height:'20px', color:'black'}}>
 
            </div>
+
+        {this.state.networkStaus && this.showNetworkConnection()}
             
          {this.state.loading ? <CircularProgress color ="primary"/> : <Button  justify="right" onClick = {this.handleSubmit} variant="contained" color="primary">
   Submit
 </Button>}  
             </Grid>
             <Grid  justify= "center" container >
+
+         
 
         {   this.state.comments.length >0  ?  <Lister  deletecomment = {(num)=> this.deleteComment(num)}   comments= {this.state.comments} /> : (this.state.loading ? <CircularProgress color ="primary"/> : null) } 
      
