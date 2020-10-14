@@ -111,7 +111,7 @@ class comment extends Component {
         {
             const handleClose = () => {
 
-                this.setState({networkStaus:false})
+                this.setState({networkStaus:false,loading:false})
             }
             return (
               <div>

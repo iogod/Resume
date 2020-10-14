@@ -67,7 +67,7 @@ componentDidUpdate(prevProps, prevState, snapshot) {
         return (
             <div>
                 {this.state.dialogStatus && <Dialog  selected = {this.state.selectedImage} closer = {()=> {this.closeDialog()}}/>}
-                <Grid justify = "center"  spacing = {10}  container style={{ minHeight: '100vh', marginTop:'2%'}} >
+                <Grid justify = "center"  spacing = {10}  container style={{ minHeight: '100vh', marginTop:'4%'}} >
                
                 {expCards}
 

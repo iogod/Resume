@@ -22,8 +22,11 @@ export class home extends Component {
        
 
         <Grid lg={3} xs= {12}  justify="center" alignContent="center" item >
-      
-        <img  className = "myface" style = {{borderRadius: '50%'}} width = {200} height = {200}  src = {Im} alt = "none"/>
+      <a href= '/contact'>
+      <img  className = "myface" style = {{borderRadius: '50%'}} width = {200} height = {200}  src = {Im} alt = "none"/>
+
+      </a>
+        
         
         </Grid>
 
