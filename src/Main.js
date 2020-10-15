@@ -23,7 +23,7 @@ export class Main extends Component {
             width: "200px",
             height: "200px",
             borderRadius: "50%",
-            zIndex: "20",
+            zIndex: "3",
           }}
         >
           <h1> hi</h1>

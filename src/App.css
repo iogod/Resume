@@ -106,7 +106,7 @@ body {
 
 .myface:hover {
   transform: scale(1.05);
-  z-index: 4;
+z-index: 6;
 }
 
 .Montana {
