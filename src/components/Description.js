@@ -11,8 +11,8 @@ function Descriptor(props) {
   return (
     <Card
       style={{
-        minWidth: "400px",
-        maxHeight: "400px",
+       width:'300px',
+        height: "400px",
         margin: "20px",
         padding: "10px",
       }}

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import Grid from "@material-ui/core/Grid";
-import PhoneIcon from "@material-ui/icons/Phone";
-import EmailIcon from "@material-ui/icons/Email";
 import Typography from "@material-ui/core/Typography";
 import Linkedin from "../media/linkedin.jpg";
 import Github from "../media/github.jpg";
+import Phone from "../media/phone.jpg";
+import Email from "../media/email.png";
 import Box from "@material-ui/core/Box";
 export class contact extends Component {
   //Possible change to functional component and possible contact info function and img component function
@@ -14,33 +13,48 @@ export class contact extends Component {
         <div className="bio" style={{ paddingTop: "30px" }}>
           <h1>Contact Me </h1>
         </div>
-        <Grid container justify="center" alignContent="center">
-          <Grid item justify="space-evenly">
-            <Box m={7}>
-              <PhoneIcon fontSize="large" style={{ color: "#BEBEBE" }} />
-              <a
-                className="contact"
-                href={"mailto:" + "4102318059@txt.att.net"}
-                style={{ color: "#902DF6" }}
-              >
-                (410)-231-8059
-              </a>
-            </Box>
-          </Grid>
+        
+        <a
+       href={"mailto:" + "johnson.roscoea@gmail.com"}
+        >
+          <img
+            className="myface"
+            style={{
+              borderRadius: "50%",
+              position: "absolute",
+              left: "5%",
+              bottom: "0%",
+              zIndex: "2",
+            }}
+            width={200}
+            height={200}
+            src={Email}
+            alt="none"
+          />
+        </a>
 
-          <Grid item justify="space-evenly">
-            <Box m={8}>
-              <EmailIcon style={{ color: "#BEBEBE" }} />
-              <a
-                className="contact"
-                href={"mailto:" + "johnson.roscoea@gmail.com"}
-                style={{ color: "#902DF6" }}
-              >
-                johnson.roscoea@gmail.com
-              </a>
-            </Box>
-          </Grid>
-        </Grid>
+
+
+
+        <a
+           href={"mailto:" + "4102318059@txt.att.net"}
+        >
+          <img
+            className="myface"
+            style={{
+              borderRadius: "50%",
+              position: "absolute",
+              left: "29%",
+              bottom: "0%",
+              zIndex: "2",
+            }}
+            width={200}
+            height={200}
+            src={Phone}
+            alt="none"
+          />
+        </a>
+
 
         <a
           href="https://www.linkedin.com/in/roscoe-johnson-a23498177/"
@@ -51,8 +65,8 @@ export class contact extends Component {
             style={{
               borderRadius: "50%",
               position: "absolute",
-              left: "50%",
-              bottom: "18%",
+              left: "57%",
+              bottom: "0%",
               zIndex: "2",
             }}
             width={200}
@@ -71,8 +85,8 @@ export class contact extends Component {
             style={{
               borderRadius: "50%",
               position: "absolute",
-              left: "38%",
-              bottom: "18%",
+              left: "88%",
+              bottom: "0%",
             }}
             width={200}
             height={200}

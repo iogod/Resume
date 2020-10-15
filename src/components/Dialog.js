@@ -13,6 +13,7 @@ export default function AlertDialog(props) {
         open={true}
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
+        maxWidth = {'50%'}
       >
         <DialogTitle id="alert-dialog-title">
           {props.selected.university}

@@ -5,8 +5,8 @@ import Button from "@material-ui/core/Button";
 
 const NavItem = (props) => {
   return (
-    <Box m={0.1}>
-      <Button component={Link} to={"/" + props.name} color="primary">
+    <Box marginLeft = {.03} >
+      <Button style = {{maxWidth:"4px",fontSize:"12px"}}   component={Link} to={"/" + props.name} color="primary">
         {props.name}
       </Button>
     </Box>

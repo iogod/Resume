@@ -51,6 +51,8 @@ export class experience extends Component {
         <Grid
           justify="center"
           spacing={10}
+          alignItems = "center"
+          alignContent ="center"
           container
           style={{ minHeight: "100vh", marginTop: "4%" }}
         >

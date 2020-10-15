@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
+import Box from "@material-ui/core/Box";
 import NavItem from "./NavItem";
 
 class Navbar extends Component {
@@ -12,13 +13,19 @@ class Navbar extends Component {
 
     return (
       <div>
-        <AppBar
-          m={200}
-          style={{ background: "transparent", boxShadow: "none" }}
-          position="fixed"
-        >
-          <Toolbar>{items}</Toolbar>
-        </AppBar>
+        <Box>
+          <AppBar
+            style={{
+              background: "transparent",
+              boxShadow: "none",
+              color: "transparent",
+              justifySelf: "center",
+            }}
+            position="fixed"
+          >
+            <Toolbar>{items}</Toolbar>
+          </AppBar>
+        </Box>
       </div>
     );
   }
