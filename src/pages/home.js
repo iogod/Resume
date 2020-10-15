@@ -4,6 +4,7 @@ import SpeedSharpIcon from "@material-ui/icons/SpeedSharp";
 import TabletMacIcon from "@material-ui/icons/TabletMac";
 import HttpsIcon from "@material-ui/icons/Https";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
+import  { Link} from "react-router-dom";
 
 
 import Im from "../media/image1.jpeg";
@@ -21,7 +22,7 @@ export class home extends Component {
           style={{ minHeight: "100vh", paddingTop: "10rem" }}
         >
           <Grid lg={3} xs={12} justify="center" alignContent="center" item>
-            <a href="/contact">
+            <Link to="/contact">
               <img
                 className="myface"
                 style={{ borderRadius: "50%" }}
@@ -30,7 +31,7 @@ export class home extends Component {
                 src={Im}
                 alt="none"
               /> 
-            </a>
+            </Link>
           </Grid>
 
           <Grid lg={3} xs={6} item>
