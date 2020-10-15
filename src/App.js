@@ -27,7 +27,7 @@ function App() {
     <div className="App">
    
    
-    <Router  basename='/'>
+    <Router  basename='/Resume'>
 
     <Navbar/>
     <Background/>
