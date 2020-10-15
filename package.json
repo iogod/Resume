@@ -18,7 +18,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
-  "proxy": "https://us-central1-resume-7e186.cloudfunctions.net/resume",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",

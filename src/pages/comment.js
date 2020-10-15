@@ -36,7 +36,7 @@ class comment extends Component {
 
   async componentDidMount() {
     if (this.checkNetworkConnection()) {
-      Axios.get("/comment")
+      Axios.get("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment")
         .then((res) => {
           const { info, refs } = res.data;
 
@@ -57,7 +57,7 @@ class comment extends Component {
 
   deleteComment = (com) => {
     this.setState({ loading: true });
-    Axios.delete("/comment/" + com, (req, res) => {
+    Axios.delete("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment/" + com, (req, res) => {
       this.setState({ loading: false });
     }).catch((err) => {   //Pass function to child to remove from parent state. Passed as arrow function, call as arrow function removing local context
       console.log(err);
@@ -141,7 +141,7 @@ class comment extends Component {
   };
 
   async postComment(commenter) {
-    await Axios.post("/comment", commenter)
+    await Axios.post("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment", commenter)
       .then((post) => {
         const {
           data: { comment },
