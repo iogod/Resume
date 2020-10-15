@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.fa72d1ca.chunk.css",
-    "main.js": "/Resume/static/js/main.66fd7746.chunk.js",
-    "main.js.map": "/Resume/static/js/main.66fd7746.chunk.js.map",
-    "runtime-main.js": "/Resume/static/js/runtime-main.4f7f43b1.js",
-    "runtime-main.js.map": "/Resume/static/js/runtime-main.4f7f43b1.js.map",
-    "static/js/2.e8c31d56.chunk.js": "/Resume/static/js/2.e8c31d56.chunk.js",
-    "static/js/2.e8c31d56.chunk.js.map": "/Resume/static/js/2.e8c31d56.chunk.js.map",
-    "index.html": "/Resume/index.html",
-    "precache-manifest.ce986edfbf93a37cc928948acf4bf01e.js": "/Resume/precache-manifest.ce986edfbf93a37cc928948acf4bf01e.js",
-    "service-worker.js": "/Resume/service-worker.js",
-    "static/css/main.fa72d1ca.chunk.css.map": "/Resume/static/css/main.fa72d1ca.chunk.css.map",
-    "static/js/2.e8c31d56.chunk.js.LICENSE.txt": "/Resume/static/js/2.e8c31d56.chunk.js.LICENSE.txt",
-    "static/media/USC.jpg": "/Resume/static/media/USC.4e279209.jpg",
-    "static/media/airplane.png": "/Resume/static/media/airplane.769fc777.png",
-    "static/media/ddg.jpg": "/Resume/static/media/ddg.96ae185f.jpg",
-    "static/media/gps.jpg": "/Resume/static/media/gps.7c35d400.jpg",
-    "static/media/image1.jpeg": "/Resume/static/media/image1.4952e05b.jpeg",
-    "static/media/linkedin.jpg": "/Resume/static/media/linkedin.932f0193.jpg",
-    "static/media/morganstate.jpg": "/Resume/static/media/morganstate.f704edbe.jpg",
-    "static/media/mountain.png": "/Resume/static/media/mountain.fa31dcac.png"
+    "main.css": "/static/css/main.fa72d1ca.chunk.css",
+    "main.js": "/static/js/main.bfc488de.chunk.js",
+    "main.js.map": "/static/js/main.bfc488de.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.a491203d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.a491203d.js.map",
+    "static/js/2.e8c31d56.chunk.js": "/static/js/2.e8c31d56.chunk.js",
+    "static/js/2.e8c31d56.chunk.js.map": "/static/js/2.e8c31d56.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9af2bb6cfae8cb4932ad8ef259f74ec9.js": "/precache-manifest.9af2bb6cfae8cb4932ad8ef259f74ec9.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.fa72d1ca.chunk.css.map": "/static/css/main.fa72d1ca.chunk.css.map",
+    "static/js/2.e8c31d56.chunk.js.LICENSE.txt": "/static/js/2.e8c31d56.chunk.js.LICENSE.txt",
+    "static/media/USC.jpg": "/static/media/USC.4e279209.jpg",
+    "static/media/airplane.png": "/static/media/airplane.769fc777.png",
+    "static/media/ddg.jpg": "/static/media/ddg.96ae185f.jpg",
+    "static/media/gps.jpg": "/static/media/gps.7c35d400.jpg",
+    "static/media/image1.jpeg": "/static/media/image1.4952e05b.jpeg",
+    "static/media/linkedin.jpg": "/static/media/linkedin.932f0193.jpg",
+    "static/media/morganstate.jpg": "/static/media/morganstate.f704edbe.jpg",
+    "static/media/mountain.png": "/static/media/mountain.fa31dcac.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.4f7f43b1.js",
+    "static/js/runtime-main.a491203d.js",
     "static/js/2.e8c31d56.chunk.js",
     "static/css/main.fa72d1ca.chunk.css",
-    "static/js/main.66fd7746.chunk.js"
+    "static/js/main.bfc488de.chunk.js"
   ]
 }
