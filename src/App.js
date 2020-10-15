@@ -3,7 +3,7 @@ import './App.css';
 import Main from './Main'
 import Navbar from './components/Navbar'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
