@@ -6,13 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
 import home from './pages/home'
 const theme = createMuiTheme({
   palette: {

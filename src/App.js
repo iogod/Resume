@@ -3,7 +3,7 @@ import './App.css';
 import Main from './Main'
 import Navbar from './components/Navbar'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -27,12 +27,12 @@ function App() {
     <div className="App">
    
    
-    <Router>
+    <Router  basename='/'>
 
     <Navbar/>
     <Background/>
      <Switch>
-    <Route exact path = "/Resume" key = {1} component = {Main}/>
+    <Route exact path = "/" key = {1} component = {Main}/>
     <Route exact path = "/about" key = {2} component = {Home}></Route>
     <Route exact path = "/experience" key = {3} component = {Experience}></Route>
     <Route exact path = "/comment" key = {4} component = {Comment}></Route>
