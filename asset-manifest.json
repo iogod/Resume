@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Resume/static/css/main.fa72d1ca.chunk.css",
+    "main.css": "/Resume/static/css/main.e84a17e6.chunk.css",
     "main.js": "/Resume/static/js/main.f4ed9aa7.chunk.js",
     "main.js.map": "/Resume/static/js/main.f4ed9aa7.chunk.js.map",
     "runtime-main.js": "/Resume/static/js/runtime-main.4f7f43b1.js",
@@ -8,9 +8,9 @@
     "static/js/2.f7844c65.chunk.js": "/Resume/static/js/2.f7844c65.chunk.js",
     "static/js/2.f7844c65.chunk.js.map": "/Resume/static/js/2.f7844c65.chunk.js.map",
     "index.html": "/Resume/index.html",
-    "precache-manifest.03764f07d5ef01d4a8fd72e2ba053a67.js": "/Resume/precache-manifest.03764f07d5ef01d4a8fd72e2ba053a67.js",
+    "precache-manifest.ee3f75972ec49369e6177204a762532a.js": "/Resume/precache-manifest.ee3f75972ec49369e6177204a762532a.js",
     "service-worker.js": "/Resume/service-worker.js",
-    "static/css/main.fa72d1ca.chunk.css.map": "/Resume/static/css/main.fa72d1ca.chunk.css.map",
+    "static/css/main.e84a17e6.chunk.css.map": "/Resume/static/css/main.e84a17e6.chunk.css.map",
     "static/js/2.f7844c65.chunk.js.LICENSE.txt": "/Resume/static/js/2.f7844c65.chunk.js.LICENSE.txt",
     "static/media/USC.jpg": "/Resume/static/media/USC.4e279209.jpg",
     "static/media/airplane.png": "/Resume/static/media/airplane.769fc777.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.4f7f43b1.js",
     "static/js/2.f7844c65.chunk.js",
-    "static/css/main.fa72d1ca.chunk.css",
+    "static/css/main.e84a17e6.chunk.css",
     "static/js/main.f4ed9aa7.chunk.js"
   ]
 }
