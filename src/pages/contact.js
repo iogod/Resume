@@ -5,7 +5,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import Typography from "@material-ui/core/Typography";
 import Linkedin from "../media/linkedin.jpg";
 import Github from "../media/github.jpg";
-import Divider from "@material-ui/core/Divider";
+import Box from "@material-ui/core/Box";
 export class contact extends Component {
     //Possible change to functional component and possible contact info function and img component function
   render() {
@@ -14,12 +14,27 @@ export class contact extends Component {
         <div className="bio" style={{ paddingTop: "30px" }}>
           <h1>Contact Me </h1>
         </div>
-        <Grid justify="center" container>
-          <Grid item lg={4} style={{ marginBottom: "15px" }}>
-            <PhoneIcon fontSize="large" style={{ color: "#BEBEBE" }}  />
-            <a className="contact" href={"mailto:" + "4102318059@txt.att.net"} style= {{marginRight:'10px',color: "#902DF6"}}>
+<Grid container justify = "center" alignContent="center">
+
+<Grid item justify="space-evenly">
+
+      <Box  m={7}>
+
+      <PhoneIcon fontSize="large" style={{ color: "#BEBEBE" }}  />
+            <a className="contact" href={"mailto:" + "4102318059@txt.att.net"} style= {{color: "#902DF6"}}>
               (410)-231-8059
             </a>
+      </Box>
+       
+
+</Grid>
+
+<Grid item justify="space-evenly">
+
+       <Box m={8}>
+
+      
+
             <EmailIcon style={{ color: '#BEBEBE' }} />
             <a
               className="contact"
@@ -27,7 +42,16 @@ export class contact extends Component {
             >
               johnson.roscoea@gmail.com
             </a>
-          </Grid>
+
+            </Box>
+
+</Grid>
+</Grid>
+       
+
+          
+          
+       
           <a
             href="https://www.linkedin.com/in/roscoe-johnson-a23498177/"
             target="_blank"
@@ -38,7 +62,7 @@ export class contact extends Component {
                 borderRadius: "50%",
                 position: "absolute",
                 left: "50%",
-                top: "30%",
+                bottom: "18%",
                 zIndex: "2",
               }}
               width={200}
@@ -58,7 +82,7 @@ export class contact extends Component {
                 borderRadius: "50%",
                 position: "absolute",
                 left: "38%",
-                top: "30%",
+                bottom: "18%",
               }}
               width={200}
               height={200}
@@ -66,7 +90,7 @@ export class contact extends Component {
               alt="none"
             />
           </a>
-        </Grid>
+        
       </div>
     );
   }

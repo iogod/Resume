@@ -157,10 +157,10 @@ class comment extends Component {
   }
 
   handleClear = (e) => {
-    
+    e.persist()
     this.setState((state) => ({
       errors: {
-        ...state.errors,      //review spread to remove errors syntax
+        ...state.errors,      
         [e.target.name]: "",
       },
     }));
