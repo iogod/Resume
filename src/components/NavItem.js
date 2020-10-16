@@ -6,7 +6,7 @@ import Grid from "@material-ui/core/Grid";
 
 const NavItem = (props) => {
   return (
-    <Grid item  justify="space-evenly">
+    <Grid item  >
       <Button
         style={{  fontSize: "18px" }}
         component={Link}
