@@ -23,16 +23,17 @@ import Background from "./components/Background"
 
 function App() {
   return (
-    
+ 
     <div className="App">
-   
+
    
     <Router  basename='/'>
 
     <Navbar/>
-    <Background/>
+    
      <Switch>
     <Route exact path = "/" key = {1} component = {Main}/>
+    
     <Route exact path = "/about" key = {2} component = {Home}></Route>
     <Route exact path = "/experience" key = {3} component = {Experience}></Route>
     <Route exact path = "/comment" key = {4} component = {Comment}></Route>
@@ -40,6 +41,7 @@ function App() {
     <Route exact path = "/contact" key = {6} component = {Contact}></Route>
   
     </Switch>
+    <Background/>
     </Router>
     </div>
     

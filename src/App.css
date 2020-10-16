@@ -69,6 +69,7 @@ img {
   font-family: "Open Sans";
   padding: 4px;
   font-size: 20px;
+  color: #902df6;
 }
 
 .bio h1 {
@@ -87,8 +88,7 @@ img {
 }
 body {
   background-color: #f1eaf3;
-  height: "100%";
-  width: "100%";
+  
 }
 .mainback body {
   background-image: none;
@@ -132,4 +132,39 @@ z-index: 6;
   100% {
     left: 100%;
   }
+}
+
+.bouncer {
+  animation: bounce  1.5s infinite;
+  background-color: transparent;
+  position: absolute;
+  top: 45%;
+  right: 0%;
+  color: white;
+  text-decoration: none; 
+  font-size:150px;
+
+  border-radius: 20% 
+
+}
+
+@keyframes bounce {
+  0% {
+
+  opacity: 0.04
+  }
+   20% {
+   opacity: .24;
+   } 50% {
+    opacity: .4
+   } 
+	60% {
+    opacity: .75
+  }
+  80% {
+   opacity: .85
+ }
+  100% {
+    opacity: 1
+ }
 }

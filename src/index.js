@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
+import Main from  './Main'
 
 import home from './pages/home'
 const theme = createMuiTheme({
@@ -27,7 +27,7 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <React.StrictMode>
    <ThemeProvider theme = {theme}>
-
+    
      <App />
     
  
