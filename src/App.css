@@ -76,6 +76,7 @@ img {
   font-family: "Lobster";
   text-align: center;
   white-space: nowrap;
+  margin-top: 4%;
 }
 .bio p {
   font-family: "Ubuntu", sans-serif;

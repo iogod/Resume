@@ -8,7 +8,7 @@ const NavItem = (props) => {
   return (
     <Grid item  justify="space-evenly">
       <Button
-        style={{  fontSize: "16px" }}
+        style={{  fontSize: "22px" }}
         component={Link}
         to={"/" + props.name}
         color="primary"
