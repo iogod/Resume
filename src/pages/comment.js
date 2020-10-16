@@ -172,7 +172,7 @@ class comment extends Component {
   render() {
     return (
       <div>
-        <div className="bio" style={{ paddingTop: "10%" }}>
+        <div className="bio" style={{ paddingTop: "7%" }}>
           <h1>Comments</h1>
         </div>
     {/* {'Possible function to create UI, since it's only used in one place, lets keep it moving'} */}
