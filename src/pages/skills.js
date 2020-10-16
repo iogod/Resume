@@ -65,7 +65,7 @@ class skills extends Component {
     });
     return (
       <React.Fragment>
-        <div className="bio" style={{ paddingTop: "30px" }}>
+        <div className="bio" style={{ paddingTop: "15%" }}>
           <h1>Skills</h1>
         </div>
 

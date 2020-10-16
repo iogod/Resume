@@ -11,11 +11,11 @@ export class contact extends Component {
   render() {
     return (
       <div>
-        <div className="bio" style={{ paddingTop: "30px" }}>
+        <div className="bio" style={{ paddingTop: "20%" }}>
           <h1>Contact Me </h1>
         </div>
 
-        <Grid container  justify="center" >
+        <Grid container  justify="center"  style = {{marginTop:"10%"}}>
           <Grid item  justify="center" item md={6} style= {{marginBottom:"20%",padding:"3px"}}>
             <Box>
               <EmailIcon />

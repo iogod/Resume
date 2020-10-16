@@ -139,8 +139,8 @@ class comment extends Component {
     this.handleClearAll();
   };
 
-  async postComment(commenter) {
-    await Axios.post("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment", commenter)
+ postComment(commenter) {
+     Axios.post("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment", commenter)
       .then((post) => {
         const {
           data: { comment },
@@ -172,11 +172,11 @@ class comment extends Component {
   render() {
     return (
       <div>
-        <div className="bio" style={{ paddingTop: "30px" }}>
+        <div className="bio" style={{ paddingTop: "10%" }}>
           <h1>Comments</h1>
         </div>
     {/* {'Possible function to create UI, since it's only used in one place, lets keep it moving'} */}
-        <Grid justify="center" style={{ marginBottom: "30px" }} container>
+        <Grid justify="center" style={{ marginTop:'5%',marginBottom: "30px" }} container>
           <TextField
             value={this.state.Name}
             onChange={this.handleUpdate}
