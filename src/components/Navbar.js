@@ -3,6 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Box from "@material-ui/core/Box";
 import NavItem from "./NavItem";
+import Grid from "@material-ui/core/Grid"
 
 class Navbar extends Component {
   render() {
@@ -13,7 +14,7 @@ class Navbar extends Component {
 
     return (
       <div>
-        <Box>
+       
           <AppBar
             style={{
               background: "transparent",
@@ -23,9 +24,12 @@ class Navbar extends Component {
             }}
             position="fixed"
           >
-            <Toolbar>{items}</Toolbar>
+            <Toolbar>
+              <Grid container justify="center" alignItems="center">
+              {items}
+                </Grid></Toolbar>
           </AppBar>
-        </Box>
+        
       </div>
     );
   }
