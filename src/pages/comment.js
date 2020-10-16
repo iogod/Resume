@@ -31,8 +31,6 @@ class comment extends Component {
       comments: [],
       networkStaus: false,
     };
-
-    // this.caller = this.caller.bind(this)
   }
 
   async componentDidMount() {
