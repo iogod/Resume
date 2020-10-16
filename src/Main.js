@@ -16,7 +16,8 @@ export class Main extends Component {
           src={Skyline}
           alt="no"
         ></img>
-        <h1 style={{ top: "20%" }}>Roscoe Johnson Resume</h1>
+        <h1 style={{ top: "20%" }}>Roscoe Johnson </h1>
+        <h4 style={{ top: "30%" }}>Full Stack Developer</h4>
         <h5>A journey of a thousand miles begins with a single step</h5>
 
         <Link
