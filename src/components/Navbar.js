@@ -28,7 +28,7 @@ function SimpleMenu(props) {
         aria-haspopup="true"
         onClick={handleClick}
       >
-        <FormatListBulletedIcon style={{ color: "#902df6", fontSize:"70px" }} />
+        <FormatListBulletedIcon style={{ color: "#902df6", fontSize:"50px" }} />
       </Button>
       <Menu
         id="simple-menu"

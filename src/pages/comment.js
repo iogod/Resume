@@ -12,12 +12,10 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 
-
-
 class comment extends Component {
   constructor(props) {
     super(props);
-//Possible refactor the render method got pretty big
+    //Possible refactor the render method got pretty big
     this.state = {
       Name: "",
       Organization: "",
@@ -35,7 +33,9 @@ class comment extends Component {
 
   async componentDidMount() {
     if (this.checkNetworkConnection()) {
-      Axios.get("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment")
+      Axios.get(
+        "https://us-central1-resume-7e186.cloudfunctions.net/resume/comment"
+      )
         .then((res) => {
           const { info, refs } = res.data;
 
@@ -43,7 +43,7 @@ class comment extends Component {
           this.setState({ loading: false });
         })
         .catch((err) => {
-        console.log(err)
+          console.log(err);
         });
     } else {
       this.setState({ networkStaus: true });
@@ -56,9 +56,14 @@ class comment extends Component {
 
   deleteComment = (com) => {
     this.setState({ loading: true });
-    Axios.delete("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment/" + com, (req, res) => {
-      this.setState({ loading: false });
-    }).catch((err) => {   //Pass function to child to remove from parent state. Passed as arrow function, call as arrow function removing local context
+    Axios.delete(
+      "https://us-central1-resume-7e186.cloudfunctions.net/resume/comment/" +
+        com,
+      (req, res) => {
+        this.setState({ loading: false });
+      }
+    ).catch((err) => {
+      //Pass function to child to remove from parent state. Passed as arrow function, call as arrow function removing local context
       console.log(err);
     });
 
@@ -71,7 +76,7 @@ class comment extends Component {
     });
   };
   checkNetworkConnection = () => {
-    return window.navigator.onLine;  //Check connection return Boolean
+    return window.navigator.onLine; //Check connection return Boolean
   };
 
   showNetworkConnection = () => {
@@ -113,7 +118,7 @@ class comment extends Component {
     if (this.checkNetworkConnection()) {
       let Note = {
         Name: Name.trim(),
-        Organization: Organization.trim(),  //Check for network then for empty required fields, set Errors or send to server
+        Organization: Organization.trim(), //Check for network then for empty required fields, set Errors or send to server
         Comment: Comment.trim(),
       };
       var error = FV(Note);
@@ -126,21 +131,24 @@ class comment extends Component {
   };
 
   handleClearAll = () => {
-    this.setState({ Name: "", Organization: "", Comment: "" }); 
+    this.setState({ Name: "", Organization: "", Comment: "" });
   };
 
   pushComments = () => {
     const { Name, Organization, Comment } = this.state;
     let Note = { creator: Name, organization: Organization, comment: Comment };
 
-    this.setState({ loading: true });     
+    this.setState({ loading: true });
     this.postComment(Note);
-    this.setState({ loading: false }); //UI Control prior to calling async to post validated data 
+    this.setState({ loading: false }); //UI Control prior to calling async to post validated data
     this.handleClearAll();
   };
 
- postComment(commenter) {
-     Axios.post("https://us-central1-resume-7e186.cloudfunctions.net/resume/comment", commenter)
+  postComment(commenter) {
+    Axios.post(
+      "https://us-central1-resume-7e186.cloudfunctions.net/resume/comment",
+      commenter
+    )
       .then((post) => {
         const {
           data: { comment },
@@ -156,27 +164,33 @@ class comment extends Component {
   }
 
   handleClear = (e) => {
-    e.persist()
+    e.persist();
     this.setState((state) => ({
       errors: {
-        ...state.errors,      
+        ...state.errors,
         [e.target.name]: "",
       },
     }));
   };
 
   handleUpdate = (e) => {
-    this.setState({ [e.target.name]: e.target.value });  //Update State on user input
+    this.setState({ [e.target.name]: e.target.value }); //Update State on user input
   };
 
   render() {
     return (
       <div>
-        <div className="bio" >
+        <div className="bio">
           <h1>Comments</h1>
         </div>
-    {/* {'Possible function to create UI, since it's only used in one place, lets keep it moving'} */}
-        <Grid justify="center" style={{ marginTop:'5%',marginBottom: "30px" }} container>
+        {/* {'Possible function to create UI, since it's only used in one place, lets keep it moving'} */}
+        <Grid
+          justify="center"
+          style={{ marginTop: "5%", marginBottom: "30px" }}
+          container
+        >
+          <Grid item>
+
           <TextField
             value={this.state.Name}
             onChange={this.handleUpdate}
@@ -187,25 +201,37 @@ class comment extends Component {
               this.state.errors.Name.length > 0 ? "Required Field" : " "
             }
             required
-            style={{ width: "25%" }}
+            
             id="standard-required"
             label="Name"
             variant="outlined"
           />
+
+          </Grid>
+          <Grid item  >
+
           <TextField
             value={this.state.Organization}
             onChange={this.handleUpdate}
             name="Organization"
             onClick={this.handleClear}
             style={{ paddingBottom: "30px" }}
-            style={{ width: "25%" }}
+       
             id="outlined-basic"
             label="Organization"
             variant="outlined"
           />
+          </Grid>
+          
 
-          <Grid container style={{ marginTop: ".25%" }} justify="center">
-            <TextField
+         
+           {/* style={{ width: "25%" }} */}
+       
+{/* style={{ width: "25%" }} */}
+          <Grid container style={{ marginTop: ".15%" }} justify="center">
+            
+         <Grid   item>
+         <TextField
               value={this.state.Comment}
               onChange={this.handleUpdate}
               name="Comment"
@@ -219,25 +245,33 @@ class comment extends Component {
               label="Comment"
               multiline
               rows={6}
-              style={{ width: "50%" }}
+              
               variant="outlined"
             />
+
+           
+            </Grid>
+     
+
+
+{/* style={{ width: "50%" }} */}
+            
           </Grid>
+
+          {/* style={{ width: "50%" }} */}
           <div width="100%" style={{ height: "20px", color: "black" }}></div>
 
           {this.state.networkStaus && this.showNetworkConnection()}
 
-       
-            <Button
-              justify="right"
-              onClick={this.handleSubmit}
-              variant="contained"
-              color="primary"
-              disabled = {this.state.loading}
-            >
-              Submit
-            </Button>
-       
+          <Button
+            justify="right"
+            onClick={this.handleSubmit}
+            variant="contained"
+            color="primary"
+            disabled={this.state.loading}
+          >
+            Submit
+          </Button>
         </Grid>
         <Grid justify="center" container>
           {this.state.comments.length > 0 ? (
