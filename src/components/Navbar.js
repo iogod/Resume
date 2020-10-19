@@ -24,11 +24,21 @@ function SimpleMenu(props) {
   return (
     <div>
       <Button
-        aria-controls="simple-menu"
+        color="primary"
         aria-haspopup="true"
         onClick={handleClick}
+        style={{ background: "none" }}
       >
-        <FormatListBulletedIcon style={{ color: "#902df6", fontSize:"50px" }} />
+        <FormatListBulletedIcon
+          className="btest"
+          onClick={handleClick}
+          aria-haspopup="true"
+          style={{
+            color: "#902df6",
+            fontSize: "50px",
+            backgroundColor: "transparent",
+          }}
+        />
       </Button>
       <Menu
         id="simple-menu"
@@ -52,27 +62,27 @@ class Navbar extends Component {
 
     return (
       <div>
-        <MediaQuery minDeviceWidth={800}>
-          <AppBar
-            style={{
-              background: "transparent",
-              boxShadow: "none",
-              color: "transparent",
-              justifySelf: "center",
-            }}
-            position="fixed"
-          >
-            <Toolbar>
+        <AppBar
+          style={{
+            background: "transparent",
+            boxShadow: "none",
+            color: "transparent",
+            justifySelf: "center",
+          }}
+          position="fixed"
+        >
+          <Toolbar>
+            <MediaQuery minDeviceWidth={800}>
               <Grid container justify="center" alignItems="center">
                 {items}
               </Grid>
-            </Toolbar>
-          </AppBar>
-        </MediaQuery>
+            </MediaQuery>
 
-        <MediaQuery maxDeviceWidth={800}>
-          <SimpleMenu items={items} />
-        </MediaQuery>
+            <MediaQuery maxDeviceWidth={800}>
+              <SimpleMenu items={items} />
+            </MediaQuery>
+          </Toolbar>
+        </AppBar>
       </div>
     );
   }

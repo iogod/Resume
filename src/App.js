@@ -24,12 +24,12 @@ import Background from "./components/Background"
 function App() {
   return (
  
-    <div className="App">
+    <div className="App" >
 
    
     <Router  basename='/'>
 
-    <Navbar/>
+    <Navbar />
     
      <Switch>
     <Route exact path = "/" key = {1} component = {Main}/>
