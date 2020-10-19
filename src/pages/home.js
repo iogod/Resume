@@ -4,14 +4,13 @@ import SpeedSharpIcon from "@material-ui/icons/SpeedSharp";
 import TabletMacIcon from "@material-ui/icons/TabletMac";
 import HttpsIcon from "@material-ui/icons/Https";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
-import  { Link} from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 import Im from "../media/image1.jpeg";
 
 export class home extends Component {
-    //Possible image function since reused in contact
-    //Possible function for ICONS/Grid items
+  //Possible image function since reused in contact
+  //Possible function for ICONS/Grid items
   render() {
     return (
       <div className="mainback">
@@ -30,7 +29,7 @@ export class home extends Component {
                 height={200}
                 src={Im}
                 alt="none"
-              /> 
+              />
             </Link>
           </Grid>
 
@@ -45,9 +44,9 @@ export class home extends Component {
 
               <p>
                 {" "}
-                I have a passion for not only thoughtful UI but overall flow and
+                I have a passion for thoughtful UI and overall flow and
                 feeling of the application. I enjoy building user interfaces and
-                designing back-end solutions{" "}
+                designing back-end solutions
               </p>
             </div>
           </Grid>
