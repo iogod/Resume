@@ -54,7 +54,7 @@ export class experience extends Component {
           alignItems="center"
           alignContent="center"
           container
-          style={{ minHeight: "100vh", marginTop: "4%" }}
+          style={{ minHeight: "100vh", marginTop: "9%" }}
         >
           <div className="bio" style={{position:"absolute",top:"6.5%",textAlign:"center"}}>
             <h1>Experience</h1>
