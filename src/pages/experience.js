@@ -51,11 +51,14 @@ export class experience extends Component {
         <Grid
           justify="center"
           spacing={10}
-          alignItems = "center"
-          alignContent ="center"
+          alignItems="center"
+          alignContent="center"
           container
           style={{ minHeight: "100vh", marginTop: "4%" }}
         >
+          <div className="bio" style={{position:"absolute",top:"6.5%",textAlign:"center"}}>
+            <h1>Experience</h1>
+          </div>
           {expCards}
         </Grid>
       </div>
