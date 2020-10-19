@@ -227,18 +227,17 @@ class comment extends Component {
 
           {this.state.networkStaus && this.showNetworkConnection()}
 
-          {this.state.loading ? (
-            <CircularProgress color="primary" />
-          ) : (
+       
             <Button
               justify="right"
               onClick={this.handleSubmit}
               variant="contained"
               color="primary"
+              disabled = {this.state.loading}
             >
               Submit
             </Button>
-          )}
+       
         </Grid>
         <Grid justify="center" container>
           {this.state.comments.length > 0 ? (
