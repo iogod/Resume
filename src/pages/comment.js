@@ -184,13 +184,9 @@ class comment extends Component {
           <h1>Comments</h1>
         </div>
         {/* {'Possible function to create UI, since it's only used in one place, lets keep it moving'} */}
-        <Grid
-          justify="center"
-          style={{ marginTop: "5%", marginBottom: "30px" }}
-          container
-        >
-          <Grid item>
-
+ 
+       
+        <Grid container justify = "center" >
           <TextField
             value={this.state.Name}
             onChange={this.handleUpdate}
@@ -201,68 +197,52 @@ class comment extends Component {
               this.state.errors.Name.length > 0 ? "Required Field" : " "
             }
             required
-            
+            style = {{width:"45%"}}
             id="standard-required"
             label="Name"
             variant="outlined"
           />
-
           </Grid>
-          <Grid item  >
-
+          <Grid container style= {{marginBottom:"25px"}} justify = "center" >
           <TextField
             value={this.state.Organization}
             onChange={this.handleUpdate}
             name="Organization"
             onClick={this.handleClear}
-            style={{ paddingBottom: "30px" }}
-       
+           
+            style= {{width:"45%"}}
             id="outlined-basic"
             label="Organization"
             variant="outlined"
           />
           </Grid>
-          
-
-         
-           {/* style={{ width: "25%" }} */}
+          <Grid container  justify="center">
        
-{/* style={{ width: "25%" }} */}
-          <Grid container style={{ marginTop: ".15%" }} justify="center">
-            
-         <Grid   item>
-         <TextField
-              value={this.state.Comment}
-              onChange={this.handleUpdate}
-              name="Comment"
-              onClick={this.handleClear}
-              error={this.state.errors.Comment.length > 0 ? true : false}
-              helperText={
-                this.state.errors.Comment.length > 0 ? "Required Field" : " "
-              }
-              required
-              id="outlined-multiline-static"
-              label="Comment"
-              multiline
-              rows={6}
-              
-              variant="outlined"
-            />
-
-           
-            </Grid>
-     
-
-
-{/* style={{ width: "50%" }} */}
-            
-          </Grid>
-
-          {/* style={{ width: "50%" }} */}
-          <div width="100%" style={{ height: "20px", color: "black" }}></div>
-
+       <TextField
+            value={this.state.Comment}
+            onChange={this.handleUpdate}
+            name="Comment"
+            onClick={this.handleClear}
+            error={this.state.errors.Comment.length > 0 ? true : false}
+            helperText={
+              this.state.errors.Comment.length > 0 ? "Required Field" : " "
+            }
+            required
+            id="outlined-multiline-static"
+            label="Comment"
+            multiline
+            rows={6}
+            style = {{width:"45%"}}
+            variant="outlined"
+          />
+         
+        </Grid>
+        <Grid
+          justify="center"
+          style={{ marginTop: "5%", marginBottom: "30px" }}
+          container
+        >
           {this.state.networkStaus && this.showNetworkConnection()}
-
           <Button
             justify="right"
             onClick={this.handleSubmit}
