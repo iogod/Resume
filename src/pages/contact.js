@@ -11,7 +11,7 @@ export class contact extends Component {
   render() {
     return (
       <div>
-        <div className="bio" style={{ paddingTop: "7%" }}>
+        <div className="bio" >
           <h1>Contact Me </h1>
         </div>
 

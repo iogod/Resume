@@ -21,7 +21,7 @@ export class home extends Component {
           container
           style={{ minHeight: "100vh", paddingTop: "10rem" }}
         >
-          <Grid lg={3} xs={12} justify="center" alignContent="center" item>
+          <Grid lg={3} xs={12} item>
             <Link to="/contact">
               <img
                 className="myface"
